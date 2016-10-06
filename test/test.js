@@ -49,7 +49,7 @@ describe('nearest-vector test', function () {
         let clusterID = [0, 0, 1, 1];
 
         for (let i = 0; i < clusterID.length; i++) {
-            nearestVector(centers, data[i], {returnObject: true}).should.deepEqual(centers[clusterID[i]]);
+            nearestVector(centers, data[i], {returnVector: true}).should.deepEqual(centers[clusterID[i]]);
         }
     });
 });
