@@ -1,7 +1,7 @@
 {
   "name": "ml-nearest-vector",
   "version": "0.0.1",
-  "description": "change it later",
+  "description": "Find the nearest point to a sample point",
   "main": "./src/index.js",
   "files": [
     "src"
@@ -23,9 +23,12 @@
     "learning",
     "data",
     "mining",
-    "datamining"
+    "datamining",
+    "nearest",
+    "vector",
+    "cluster"
   ],
-  "author": "maasencioh <maasencioh@gmail.com> (https://github.com/maasencioh)",
+  "author": "Miguel Asencio <maasencioh@gmail.com> (https://github.com/maasencioh)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mljs/nearest-vector/issues"
@@ -40,5 +43,8 @@
     "mocha": "^3.0.2",
     "mocha-better-spec-reporter": "^3.0.2",
     "should": "^11.1.0"
+  },
+  "dependencies": {
+    "ml-distance-euclidean": "^1.0.0"
   }
 }

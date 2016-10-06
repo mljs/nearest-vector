@@ -6,7 +6,7 @@
   [![David deps][david-image]][david-url]
   [![npm download][download-image]][download-url]
   
-change it later
+> Find the nearest point to a sample point
 
 ## Installation
 
@@ -20,6 +20,9 @@ $ npm install ml-nearest-vector
 
 ```js
 const nearestVector = require('ml-nearest-vector');
+
+let centers = [[1, 2, 1], [-1, -1, -1]];
+nearestVector(centers, [1, 2, 1]) === 0;
 ```
 
 ## License
