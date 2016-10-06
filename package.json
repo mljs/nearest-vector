@@ -1,6 +1,6 @@
 {
   "name": "ml-nearest-vector",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Find the nearest point to a sample point",
   "main": "./src/index.js",
   "files": [
