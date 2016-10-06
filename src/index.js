@@ -4,6 +4,7 @@ const squaredDistance = require('ml-distance-euclidean').squared;
 
 const defaultOptions = {
     distanceFunction: squaredDistance,
+    similarityFunction: false,
     returnObject: false
 };
 
@@ -18,7 +19,10 @@ const defaultOptions = {
  * @return {Number|Array<Number>} - The index or the content of the nearest vector
  */
 function nearestVector(listVectors, vector, options) {
-    options = Object.assign({}, defaultOptions, options);
+    options = options || defaultOptions;
+    options.distanceFunction = options.distanceFunction || defaultOptions.distanceFunction;
+    options.similarityFunction = options.similarityFunction || defaultOptions.similarityFunction;
+    options.returnObject = options.returnObject || defaultOptions.returnObject;
 
     var vectorIndex = -1;
     if (typeof options.similarityFunction === 'function') {
