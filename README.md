@@ -6,7 +6,7 @@
   [![David deps][david-image]][david-url]
   [![npm download][download-image]][download-url]
   
-change it later
+> Find the nearest point to a sample point
 
 ## Installation
 
