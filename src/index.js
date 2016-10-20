@@ -10,13 +10,13 @@ const defaultOptions = {
 
 /**
  * Find the nearest vector in a list to a sample vector
- * @param {Array<Array<Number>>} listVectors - List of vectors with same dimensions
- * @param {Array<Number>} vector - Reference vector to "classify"
- * @param {Object} [options] - Options object
- * @param {Function} [options.distanceFunction = squaredDistance] - Function that receives two vectors and return their distance value as number
- * @param {Function} [options.similarityFunction = undefined] - Function that receives two vectors and return their similarity value as number
- * @param {Boolean} [options.returnVector = false] - Return the nearest vector instead of its index
- * @return {Number|Array<Number>} - The index or the content of the nearest vector
+ * @param {Array<Array<number>>} listVectors - List of vectors with same dimensions
+ * @param {Array<number>} vector - Reference vector to "classify"
+ * @param {object} [options] - Options object
+ * @param {function} [options.distanceFunction = squaredDistance] - Function that receives two vectors and return their distance value as number
+ * @param {function} [options.similarityFunction = undefined] - Function that receives two vectors and return their similarity value as number
+ * @param {boolean} [options.returnVector = false] - Return the nearest vector instead of its index
+ * @return {number|Array<number>} - The index or the content of the nearest vector
  */
 function nearestVector(listVectors, vector, options) {
     options = options || defaultOptions;

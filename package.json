@@ -4,7 +4,8 @@
   "description": "Find the nearest point to a sample point",
   "main": "./src/index.js",
   "files": [
-    "src"
+    "src",
+    "tonic.js"
   ],
   "scripts": {
     "eslint": "eslint src test",
