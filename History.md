@@ -1,3 +1,13 @@
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/mljs/nearest-vector/compare/v2.0.0...v2.0.1) (2018-08-15)
+
+
+### Bug Fixes
+
+* add npm files ([6f2987a](https://github.com/mljs/nearest-vector/commit/6f2987a))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/mljs/nearest-vector/compare/v1.0.1...v2.0.0) (2018-08-15)
 
