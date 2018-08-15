@@ -3,14 +3,14 @@
 import nearestVector, { findNearestVector } from '..';
 
 function cosineSimilarity(a: number[], b: number[]) {
-  var ii = a.length;
+  const ii = a.length;
 
-  var p = 0;
+  let p = 0;
 
-  var p2 = 0;
+  let p2 = 0;
 
-  var q2 = 0;
-  for (var i = 0; i < ii; i++) {
+  let q2 = 0;
+  for (let i = 0; i < ii; i++) {
     p += a[i] * b[i];
     p2 += a[i] * a[i];
     q2 += b[i] * b[i];
@@ -20,9 +20,9 @@ function cosineSimilarity(a: number[], b: number[]) {
 
 describe('nearest-vector test', () => {
   test('Distance tests', () => {
-    let centers = [[1, 2, 1], [-1, -1, -1]];
-    let data = [[1, 1, 1], [1, 2, 1], [-1, -1, -1], [-1, -1, -1.5]];
-    let clusterID = [0, 0, 1, 1];
+    const centers = [[1, 2, 1], [-1, -1, -1]];
+    const data = [[1, 1, 1], [1, 2, 1], [-1, -1, -1], [-1, -1, -1.5]];
+    const clusterID = [0, 0, 1, 1];
 
     for (let i = 0; i < clusterID.length; i++) {
       expect(nearestVector(centers, data[i])).toBe(clusterID[i]);
@@ -30,12 +30,12 @@ describe('nearest-vector test', () => {
   });
 
   test('Similarity tests', () => {
-    let centers = [[1, 2, 1], [-1, -1, -1]];
-    let data = [[1, 1, 1], [1, 2, 1], [-1, -1, -1], [-1, -1, -1.5]];
-    let clusterID = [0, 0, 1, 1];
+    const centers = [[1, 2, 1], [-1, -1, -1]];
+    const data = [[1, 1, 1], [1, 2, 1], [-1, -1, -1], [-1, -1, -1.5]];
+    const clusterID = [0, 0, 1, 1];
 
     // cosine similarity
-    let options = { similarityFunction: cosineSimilarity };
+    const options = { similarityFunction: cosineSimilarity };
 
     for (let i = 0; i < clusterID.length; i++) {
       expect(nearestVector(centers, data[i], options)).toBe(clusterID[i]);
@@ -49,9 +49,9 @@ describe('nearest-vector test', () => {
   });
 
   test('find nearest vector', () => {
-    let centers = [[1, 2, 1], [-1, -1, -1]];
-    let data = [[1, 1, 1], [1, 2, 1], [-1, -1, -1], [-1, -1, -1.5]];
-    let clusterID = [0, 0, 1, 1];
+    const centers = [[1, 2, 1], [-1, -1, -1]];
+    const data = [[1, 1, 1], [1, 2, 1], [-1, -1, -1], [-1, -1, -1.5]];
+    const clusterID = [0, 0, 1, 1];
 
     for (let i = 0; i < clusterID.length; i++) {
       expect(findNearestVector(centers, data[i])).toEqual(

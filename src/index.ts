@@ -2,14 +2,14 @@
 
 import { squaredEuclidean } from 'ml-distance-euclidean';
 
-const defaultOptions: Options = {
+const defaultOptions: IOptions = {
   distanceFunction: squaredEuclidean
 };
 
 type Vector = number[];
 type Matrix = number[][];
 
-interface Options {
+interface IOptions {
   distanceFunction?: (vector1: Vector, vector2: Vector) => number;
   similarityFunction?: (vector1: Vector, vector2: Vector) => number;
 }
@@ -17,19 +17,19 @@ interface Options {
 export default function nearestVector(
   listVectors: Matrix,
   vector: number[],
-  options: Options = defaultOptions
+  options: IOptions = defaultOptions
 ) {
   const distanceFunction =
     options.distanceFunction || defaultOptions.distanceFunction;
   const similarityFunction =
     options.similarityFunction || defaultOptions.similarityFunction;
 
-  var vectorIndex = -1;
+  let vectorIndex = -1;
   if (typeof similarityFunction === 'function') {
     // maximum similarity
-    var maxSim = Number.MIN_VALUE;
-    for (var j = 0; j < listVectors.length; j++) {
-      var sim = similarityFunction(vector, listVectors[j]);
+    let maxSim = Number.MIN_VALUE;
+    for (let j = 0; j < listVectors.length; j++) {
+      const sim = similarityFunction(vector, listVectors[j]);
       if (sim > maxSim) {
         maxSim = sim;
         vectorIndex = j;
@@ -37,9 +37,9 @@ export default function nearestVector(
     }
   } else if (typeof distanceFunction === 'function') {
     // minimum distance
-    var minDist = Number.MAX_VALUE;
-    for (var i = 0; i < listVectors.length; i++) {
-      var dist = distanceFunction(vector, listVectors[i]);
+    let minDist = Number.MAX_VALUE;
+    for (let i = 0; i < listVectors.length; i++) {
+      const dist = distanceFunction(vector, listVectors[i]);
       if (dist < minDist) {
         minDist = dist;
         vectorIndex = i;
@@ -55,7 +55,7 @@ export default function nearestVector(
 export function findNearestVector(
   vectorList: Matrix,
   vector: Vector,
-  options: Options = defaultOptions
+  options: IOptions = defaultOptions
 ) {
   const index = nearestVector(vectorList, vector, options);
   return vectorList[index];
