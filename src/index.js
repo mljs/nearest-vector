@@ -3,9 +3,9 @@
 const squaredDistance = require('ml-distance-euclidean').squared;
 
 const defaultOptions = {
-    distanceFunction: squaredDistance,
-    similarityFunction: false,
-    returnVector: false
+  distanceFunction: squaredDistance,
+  similarityFunction: false,
+  returnVector: false
 };
 
 /**
@@ -19,43 +19,41 @@ const defaultOptions = {
  * @return {number|Array<number>} - The index or the content of the nearest vector
  */
 function nearestVector(listVectors, vector, options) {
-    options = options || defaultOptions;
-    const distanceFunction = options.distanceFunction || defaultOptions.distanceFunction;
-    const similarityFunction = options.similarityFunction || defaultOptions.similarityFunction;
-    const returnVector = options.returnVector || defaultOptions.returnVector;
+  options = options || defaultOptions;
+  const distanceFunction = options.distanceFunction || defaultOptions.distanceFunction;
+  const similarityFunction = options.similarityFunction || defaultOptions.similarityFunction;
+  const returnVector = options.returnVector || defaultOptions.returnVector;
 
-    var vectorIndex = -1;
-    if (typeof similarityFunction === 'function') {
-
-        // maximum similarity
-        var maxSim = Number.MIN_VALUE;
-        for (var j = 0; j < listVectors.length; j++) {
-            var sim = similarityFunction(vector, listVectors[j]);
-            if (sim > maxSim) {
-                maxSim = sim;
-                vectorIndex = j;
-            }
-        }
-    } else if (typeof distanceFunction === 'function') {
-
-        // minimum distance
-        var minDist = Number.MAX_VALUE;
-        for (var i = 0; i < listVectors.length; i++) {
-            var dist = distanceFunction(vector, listVectors[i]);
-            if (dist < minDist) {
-                minDist = dist;
-                vectorIndex = i;
-            }
-        }
-    } else {
-        throw new Error('A similarity or distance function it\'s required');
+  var vectorIndex = -1;
+  if (typeof similarityFunction === 'function') {
+    // maximum similarity
+    var maxSim = Number.MIN_VALUE;
+    for (var j = 0; j < listVectors.length; j++) {
+      var sim = similarityFunction(vector, listVectors[j]);
+      if (sim > maxSim) {
+        maxSim = sim;
+        vectorIndex = j;
+      }
     }
-
-    if (returnVector) {
-        return listVectors[vectorIndex];
-    } else {
-        return vectorIndex;
+  } else if (typeof distanceFunction === 'function') {
+    // minimum distance
+    var minDist = Number.MAX_VALUE;
+    for (var i = 0; i < listVectors.length; i++) {
+      var dist = distanceFunction(vector, listVectors[i]);
+      if (dist < minDist) {
+        minDist = dist;
+        vectorIndex = i;
+      }
     }
+  } else {
+    throw new Error('A similarity or distance function it\'s required');
+  }
+
+  if (returnVector) {
+    return listVectors[vectorIndex];
+  } else {
+    return vectorIndex;
+  }
 }
 
 module.exports = nearestVector;
