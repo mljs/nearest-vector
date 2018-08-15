@@ -2,19 +2,19 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>ml-nearest-vector 1.0.1 | Documentation</title>
+  <title>ml-nearest-vector 2.0.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
   <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/split.css' type='text/css' rel='stylesheet' />
 </head>
-<body class='documentation'>
-  <div class='max-width-4 mx-auto'>
-    <div class='clearfix md-mxn2'>
-      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>ml-nearest-vector</h3>
-          <div class='mb1'><code>1.0.1</code></div>
+          <div class='mb1'><code>2.0.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -23,16 +23,6 @@
           <div id='toc'>
             <ul class='list-reset h5 py1-ul'>
               
-                
-                <li><a
-                  href='#nearestvector'
-                  class="">
-                  nearestVector
-                  
-                </a>
-                
-                </li>
-              
             </ul>
           </div>
           <div class='mt1 h6 quiet'>
@@ -40,140 +30,12 @@
           </div>
         </div>
       </div>
-      <div class='fix-margin-3'>
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    <h3 class='fl m0' id='nearestvector'>
-      nearestVector
-    </h3>
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/nearest-vector/blob/ffcd1f94ac9187cb8279d085838e84139c0f8754/src/index.js#L21-L59'>
-      <span>src/index.js</span>
-      </a>
-    
-  </div>
-  
-
-  <p>Find the nearest vector in a list to a sample vector</p>
-
-
-  <div class='pre p1 fill-light mt0'>nearestVector(listVectors: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;&gt;, vector: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;, options: [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>]): (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;)</div>
-
-  
-
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>listVectors</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;&gt;)</code> List of vectors with same dimensions
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>vector</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;)</code> Reference vector to &quot;classify&quot;
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>options</span> <code class='quiet'>([<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>])</code> Options object
-
-          </div>
-          
-          <table class='mt1 mb2 fixed-table h5 col-12'>
-            <colgroup>
-              <col width='30%' />
-              <col width='70%' />
-            </colgroup>
-            <thead>
-              <tr class='bold fill-light'>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody class='mt1'>
-              
-                <tr>
-                  <td class='break-word'><span class='code bold'>options.distanceFunction</span> <code class='quiet'>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>]</code>
-                  
-                    (default <code>squaredDistance</code>)
-                  </td>
-                  <td class='break-word'><span>Function that receives two vectors and return their distance value as number
-</span></td>
-                </tr>
-              
-                <tr>
-                  <td class='break-word'><span class='code bold'>options.similarityFunction</span> <code class='quiet'>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>]</code>
-                  
-                    (default <code>undefined</code>)
-                  </td>
-                  <td class='break-word'><span>Function that receives two vectors and return their similarity value as number
-</span></td>
-                </tr>
-              
-                <tr>
-                  <td class='break-word'><span class='code bold'>options.returnVector</span> <code class='quiet'>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>]</code>
-                  
-                    (default <code>false</code>)
-                  </td>
-                  <td class='break-word'><span>Return the nearest vector instead of its index
-</span></td>
-                </tr>
-              
-            </tbody>
-          </table>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;)</code>:
-        The index or the content of the nearest vector
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
         
       </div>
     </div>
-  </div>
   <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
   <script src='assets/site.js'></script>
 </body>
 </html>
