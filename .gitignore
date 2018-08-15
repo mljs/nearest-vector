@@ -4,3 +4,5 @@ logs
 *.log
 npm-debug.log*
 coverage
+lib
+lib-es6

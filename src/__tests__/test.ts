@@ -1,8 +1,8 @@
 'use strict';
 
-const nearestVector = require('..');
+import nearestVector, { findNearestVector } from '..';
 
-function cosineSimilarity(a, b) {
+function cosineSimilarity(a: number[], b: number[]) {
   var ii = a.length;
 
   var p = 0;
@@ -48,13 +48,13 @@ describe('nearest-vector test', () => {
     ).toThrowError("A similarity or distance function it's required");
   });
 
-  test('Return object tests', () => {
+  test('find nearest vector', () => {
     let centers = [[1, 2, 1], [-1, -1, -1]];
     let data = [[1, 1, 1], [1, 2, 1], [-1, -1, -1], [-1, -1, -1.5]];
     let clusterID = [0, 0, 1, 1];
 
     for (let i = 0; i < clusterID.length; i++) {
-      expect(nearestVector(centers, data[i], { returnVector: true })).toEqual(
+      expect(findNearestVector(centers, data[i])).toEqual(
         centers[clusterID[i]]
       );
     }
