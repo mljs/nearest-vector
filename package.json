@@ -33,7 +33,8 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "collectCoverage": true
   },
   "repository": {
     "type": "git",
