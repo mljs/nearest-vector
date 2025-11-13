@@ -1,9 +1,7 @@
-'use strict';
-
 import { squaredEuclidean } from 'ml-distance-euclidean';
 
 const defaultOptions: IOptions = {
-  distanceFunction: squaredEuclidean
+  distanceFunction: squaredEuclidean,
 };
 
 type Vector = number[];
@@ -14,10 +12,10 @@ interface IOptions {
   similarityFunction?: (vector1: Vector, vector2: Vector) => number;
 }
 
-export default function nearestVector(
+export function nearestVector(
   listVectors: Matrix,
   vector: number[],
-  options: IOptions = defaultOptions
+  options: IOptions = defaultOptions,
 ) {
   const distanceFunction =
     options.distanceFunction || defaultOptions.distanceFunction;
@@ -55,7 +53,7 @@ export default function nearestVector(
 export function findNearestVector(
   vectorList: Matrix,
   vector: Vector,
-  options: IOptions = defaultOptions
+  options: IOptions = defaultOptions,
 ) {
   const index = nearestVector(vectorList, vector, options);
   return vectorList[index];
