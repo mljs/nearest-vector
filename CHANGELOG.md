@@ -1,4 +1,15 @@
 <a name="2.0.1"></a>
+## [3.0.0](https://github.com/mljs/nearest-vector/compare/v2.0.1...v3.0.0) (2025-11-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate to type:module and do not expose default
+
+### Features
+
+* migrate to type:module and do not expose default ([91cdbf6](https://github.com/mljs/nearest-vector/commit/91cdbf6f282d22eafd9eff47e207fa17ccfde8b2))
+
 ## [2.0.1](https://github.com/mljs/nearest-vector/compare/v2.0.0...v2.0.1) (2018-08-15)
 
 
@@ -34,6 +45,3 @@ index, the other the nearest vector itself
 ### Features
 
 * initial implementation ([218dc64](https://github.com/mljs/nearest-vector/commit/218dc64))
-
-
-

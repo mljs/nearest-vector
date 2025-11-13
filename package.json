@@ -1,6 +1,6 @@
 {
   "name": "ml-nearest-vector",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Find the nearest point to a sample point",
   "type": "module",
   "exports": {
