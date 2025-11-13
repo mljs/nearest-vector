@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/mljs/nearest-vector#readme",
   "dependencies": {
-    "ml-distance-euclidean": "^2.0.0"
+    "ml-distance-euclidean": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
