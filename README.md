@@ -37,8 +37,6 @@ findNearstVector(centers, [1, 2, 1]); // [1, 2, 1]
 
 [npm-image]: https://img.shields.io/npm/v/ml-nearest-vector.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/ml-nearest-vector
-[travis-image]: https://img.shields.io/travis/mljs/nearest-vector/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/mljs/nearest-vector
 [coveralls-image]: https://img.shields.io/coveralls/mljs/nearest-vector.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/github/mljs/nearest-vector
 [david-image]: https://img.shields.io/david/mljs/nearest-vector.svg?style=flat-square
