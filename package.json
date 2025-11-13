@@ -3,7 +3,9 @@
   "version": "2.0.1",
   "description": "Find the nearest point to a sample point",
   "type": "module",
-  "exports": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
   "files": [
     "src",
     "lib"
@@ -42,6 +44,9 @@
     "url": "https://github.com/mljs/nearest-vector/issues"
   },
   "homepage": "https://github.com/mljs/nearest-vector#readme",
+  "dependencies": {
+    "ml-distance-euclidean": "^2.0.0"
+  },
   "devDependencies": {
     "@types/node": "^24.10.1",
     "@vitest/coverage-v8": "^4.0.8",
@@ -51,8 +56,5 @@
     "rimraf": "^6.1.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.8"
-  },
-  "dependencies": {
-    "ml-distance-euclidean": "^2.0.0"
   }
 }
