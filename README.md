@@ -1,10 +1,9 @@
-# nearest-vector
+# ml-nearest-vector
 
-[![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-[![David deps][david-image]][david-url]
-[![npm download][download-image]][download-url]
+[![NPM version](https://img.shields.io/npm/v/ml-nearest-vector.svg)](https://www.npmjs.com/package/ml-nearest-vector)
+[![npm download](https://img.shields.io/npm/dm/ml-nearest-vector.svg)](https://www.npmjs.com/package/ml-nearest-vector)
+[![test coverage](https://img.shields.io/codecov/c/github/mljs/spectra-processing.svg)](https://codecov.io/gh/mljs/spectra-processing)
+[![license](https://img.shields.io/npm/l/ml-nearest-vector.svg)](https://github.com/mljs/spectra-processing/blob/main/LICENSE)
 
 > Find the nearest point to a sample point
 
@@ -34,12 +33,3 @@ findNearstVector(centers, [1, 2, 1]); // [1, 2, 1]
 ## License
 
 [MIT](./LICENSE)
-
-[npm-image]: https://img.shields.io/npm/v/ml-nearest-vector.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/ml-nearest-vector
-[coveralls-image]: https://img.shields.io/coveralls/mljs/nearest-vector.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/github/mljs/nearest-vector
-[david-image]: https://img.shields.io/david/mljs/nearest-vector.svg?style=flat-square
-[david-url]: https://david-dm.org/mljs/nearest-vector
-[download-image]: https://img.shields.io/npm/dm/ml-nearest-vector.svg?style=flat-square
-[download-url]: https://npmjs.org/package/ml-nearest-vector
