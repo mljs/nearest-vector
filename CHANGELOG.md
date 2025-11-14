@@ -1,4 +1,11 @@
 <a name="2.0.1"></a>
+## [3.0.1](https://github.com/mljs/nearest-vector/compare/v3.0.0...v3.0.1) (2025-11-14)
+
+
+### Bug Fixes
+
+* correct badges in README ([1fa4dbb](https://github.com/mljs/nearest-vector/commit/1fa4dbba5eb61832cbab99fa1fdf9cfb096afc02))
+
 ## [3.0.0](https://github.com/mljs/nearest-vector/compare/v2.0.1...v3.0.0) (2025-11-13)
 
 
